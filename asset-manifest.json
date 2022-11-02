@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.57422a26.css",
+    "main.js": "/portfolio/static/js/main.e186f227.js",
+    "static/media/profile_pic.png": "/portfolio/static/media/profile_pic.e146291b1fdb2a8eb1e7.png",
+    "static/media/skillset.svg": "/portfolio/static/media/skillset.cf011442153c60d37cef306c40810322.svg",
+    "index.html": "/portfolio/index.html",
+    "main.57422a26.css.map": "/portfolio/static/css/main.57422a26.css.map",
+    "main.e186f227.js.map": "/portfolio/static/js/main.e186f227.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57422a26.css",
+    "static/js/main.e186f227.js"
+  ]
+}
