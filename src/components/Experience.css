@@ -1,0 +1,29 @@
+.experience{
+    text-align: center;
+
+    padding: 50px 0 50px 0;
+}
+
+.experience_container{
+   
+}
+
+.experience_card_container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 2.5em;
+}
+
+.experience_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+
+}
+
+.experience_icon{
+    font-size: 70px;
+    color:#562BBF;
+}
