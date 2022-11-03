@@ -90,12 +90,20 @@ li:hover {
     text-decoration: none;
 }
 
+.light_mode_txt:hover{
+    color: #6E57E0;
+}
+
+.dark_mode_txt:hover{
+    color: #6E57E0;
+}
 
 
 
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
 
 
     .navigation_list{
@@ -134,10 +142,22 @@ li:hover {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+
+    .navigation_list {
+        column-gap: 2em;
+    }
+
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .navigation_list {
+        column-gap: 3em;
+    }
+
+
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {}

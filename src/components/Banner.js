@@ -14,7 +14,6 @@ import { TiArrowRightOutline } from "react-icons/ti";
 
 const Banner = () => {
 
-    
     return (
 
         <section className="banner" id="banner">
@@ -63,10 +62,7 @@ const Banner = () => {
 
             </div>
         </section>
-
     )
-
-
 }
 
 export default Banner;

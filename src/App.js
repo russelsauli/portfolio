@@ -11,9 +11,16 @@ function App() {
   return (
     <>
 
-      <Navigation />
-      <Banner />
-   
+
+<Navigation />
+<Banner />
+
+
+      <ContactMe />
+     
+     
+
+
     </>
   );
 }

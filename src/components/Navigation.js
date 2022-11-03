@@ -18,6 +18,7 @@ const Navigation = () => {
 
     const [activeNav, setActiveNav] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
+    const [modeDesign, setmodeDesign] = useState(" light_mode_bg light_mode_txt");
     const [activeSection, setactiveSection] = useState("home");
 
 
@@ -41,14 +42,13 @@ const Navigation = () => {
 
     return (
 
-
-        <header className="navigation "  >
+        <header className={"navigation "+modeDesign}  id="home">
 
             <nav className="navigation_container container">
 
                 <div className="navigation_logo_container">
 
-                    <h6 className="navigation_logo">Russel</h6>
+                    <h6 className="navigation_logo">JRS  {darkMode}</h6>
 
                     <div className="navigation_icon_display" onClick={
                         () => {
@@ -59,9 +59,9 @@ const Navigation = () => {
                     </div>
 
                 </div>
+                
 
-
-                <div className={activeNav ? "navigation_list_container" .darkMode? "light_mode_bg light_mode_txt":"dark_mode_bg dark_mode_txt" : "navigation_list_container nav_close" }>
+                <div className={activeNav ? "navigation_list_container" : "navigation_list_container nav_close" } >
                     <ul className="navigation_list">
 
                         <li onClick={() => { setactiveSection("home"); setActiveNav(false); }} className={activeSection === "home" ? "activeSection" : ""} >
@@ -77,11 +77,17 @@ const Navigation = () => {
                         </li>
 
                         <li onClick={() => { setactiveSection("contact_me"); setActiveNav(false); }} className={activeSection === "contact_me" ? "activeSection" : ""}>
-                            <AnchorLink href='#banner' className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>contact_me</AnchorLink>
+                            <AnchorLink href='#contact_me' className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>contact_me</AnchorLink>
                         </li>
 
-                        <li onClick={() => { setDarkMode(!darkMode); }} >
+                        <li onClick={() => { setDarkMode(!darkMode); 
+                        
+                        darkMode ? setmodeDesign(" light_mode_bg light_mode_txt") :setmodeDesign(" dark_mode_bg dark_mode_txt");
+                        
+                        }} >
                             {darkMode ? < BsSun /> : <BiMoon />}
+
+                            
                         </li>
                     </ul>
                 </div>

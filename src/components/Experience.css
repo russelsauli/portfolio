@@ -1,29 +1,42 @@
-.experience{
-    text-align: center;
+.experience_card_container {
 
-    padding: 50px 0 50px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    justify-content: center;
+    grid-row: 20px;
 }
 
-.experience_container{
+.experience_card_container :nth-child(odd) {
+    grid-column: 3/ 7;
+
+}
+
+.experience_card_container :nth-child(even) {
+    
+    grid-column: 1/3;
+    grid-row: 2;
+
+    
+
+}
+
+.experience_card_container :nth-child(3) {
+    grid-row: 3;
    
 }
 
-.experience_card_container{
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    column-gap: 2.5em;
-}
 
-.experience_item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 25px;
-
-}
 
 .experience_icon{
-    font-size: 70px;
-    color:#562BBF;
+    color: #562BBF;
+    font-size: 45px;
 }
+.experience_year{
+    font-size: 16px;
+}
+
+
+
+
+
