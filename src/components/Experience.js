@@ -16,8 +16,8 @@ const Experience = () => {
 
             <div className="experience_container container">
 
-                <h2 >Experience</h2>
-                <h3 >Work</h3>
+                <h2 className="section_label">Work Experience</h2>
+
 
                 <div className="experience_card_container">
 
@@ -30,7 +30,7 @@ const Experience = () => {
 
                     <div className="experience_item">
                         <TbCSharp className="experience_icon" />
-                        <h3>C# Software Engineer</h3>
+                        <h3>Software Engineer</h3>
                         <p className="experience_year">Oct 2021-March 2022</p>
                        
                     </div>

@@ -11,14 +11,15 @@ function App() {
   return (
     <>
 
-
-<Navigation />
-<Banner />
-
-
+      <Navigation />
+      <Banner />
+      <Skills />
+      <Experience />
       <ContactMe />
-     
-     
+
+
+
+
 
 
     </>

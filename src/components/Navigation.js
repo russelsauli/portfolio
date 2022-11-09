@@ -42,57 +42,60 @@ const Navigation = () => {
 
     return (
 
-        <header className={"navigation "+modeDesign}  id="home">
 
-            <nav className="navigation_container container">
+        <header className={activeNav? " navigation "+modeDesign:"navigation "+modeDesign} id="home">
 
-                <div className="navigation_logo_container">
+            <div className="container">
 
-                    <h6 className="navigation_logo">JRS  {darkMode}</h6>
+                <nav className= {setmodeDesign + " navigation_container"}>
 
-                    <div className="navigation_icon_display" onClick={
-                        () => {
-                            setActiveNav(!activeNav);
-                        }}>
-                        {activeNav ? <IoCloseSharp className="nav_icon" /> : <BsList className="nav_icon" />}
+                    <div className="navigation_logo_container">
 
+                        <h6 className="navigation_logo">JRS  {darkMode}</h6>
+
+                        <div className="navigation_icon_display" onClick={
+                            () => {
+                                setActiveNav(!activeNav);
+                            }}>
+                            {activeNav ? <IoCloseSharp className="nav_icon" /> : <BsList className="nav_icon" />}
+
+                        </div>
                     </div>
 
-                </div>
-                
+                    <div className={activeNav ? "navigation_list_container" : "navigation_list_container nav_close"} >
+                        <ul className="navigation_list">
 
-                <div className={activeNav ? "navigation_list_container" : "navigation_list_container nav_close" } >
-                    <ul className="navigation_list">
+                            <li onClick={() => { setactiveSection("home"); setActiveNav(false); }} className={activeSection === "home" ? "activeSection" : ""} >
+                                <AnchorLink href='#banner' className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>Home</AnchorLink>
+                            </li>
 
-                        <li onClick={() => { setactiveSection("home"); setActiveNav(false); }} className={activeSection === "home" ? "activeSection" : ""} >
-                            <AnchorLink href='#banner' className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>Home</AnchorLink>
-                        </li>
+                            <li onClick={() => { setactiveSection("skills"); setActiveNav(false); }} className={activeSection === "skills" ? "activeSection" : ""}>
+                                <AnchorLink href='#skills' className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>Qualifications</AnchorLink>
+                            </li>
 
-                        <li onClick={() => { setactiveSection("skills"); setActiveNav(false); }} className={activeSection === "skills" ? "activeSection" : ""}>
-                            <AnchorLink href='#skills'className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>Skill</AnchorLink>
-                        </li>
+                            <li onClick={() => { setactiveSection("contact_me"); setActiveNav(false); }} className={activeSection === "contact_me" ? "activeSection" : ""}>
+                                <AnchorLink href='#contact_me' className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>contact Me</AnchorLink>
+                            </li>
 
-                        <li onClick={() => { setactiveSection("experience"); setActiveNav(false); }} className={activeSection === "experience" ? "activeSection" : ""}>
-                            <AnchorLink href='#experience' className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>Experience</AnchorLink>
-                        </li>
+                            <li onClick={() => {
+                                
+                                setDarkMode(!darkMode);
 
-                        <li onClick={() => { setactiveSection("contact_me"); setActiveNav(false); }} className={activeSection === "contact_me" ? "activeSection" : ""}>
-                            <AnchorLink href='#contact_me' className={darkMode ? "dark_mode_txt" : "light_mode_txt"}>contact_me</AnchorLink>
-                        </li>
+                                darkMode ? setmodeDesign(" light_mode_bg light_mode_txt") : setmodeDesign(" dark_mode_bg dark_mode_txt");
 
-                        <li onClick={() => { setDarkMode(!darkMode); 
-                        
-                        darkMode ? setmodeDesign(" light_mode_bg light_mode_txt") :setmodeDesign(" dark_mode_bg dark_mode_txt");
-                        
-                        }} >
-                            {darkMode ? < BsSun /> : <BiMoon />}
+                            }} >
+                                {darkMode ? < BsSun /> : <BiMoon />}
 
-                            
-                        </li>
-                    </ul>
-                </div>
 
-            </nav>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+
+            </div>
+
+
 
         </header>
 

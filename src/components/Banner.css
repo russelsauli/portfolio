@@ -1,197 +1,139 @@
 .banner {
     position: relative;
     width: 100%;
+    height: 100vh;
+    display: flex;
 
+    
 }
 
+
 .banner_container {
-    position: relative;
     display: flex;
-    justify-content: space-evenly;
-    column-gap: 3.5em;
+    flex-direction: column;
+    row-gap: 2em;
     align-items: center;
-    height: 100vh;
+   
 }
 
 .social_media_container {
     display: flex;
-    flex-direction: column;
-    row-gap: 1.5em;
+    column-gap: 1.5em;
 }
 
-.profile_Name {
-    font-size: 45px;
+.banner_social_media {
+    font-size: 1.75em;
+    color:#6E57E0;
 }
 
+.banner_social_media:hover {
+    color: blueviolet;
+    transform: translateY(-5px);
+    transition: .5s;
+}
+
+.profile_Name{
+    font-size: 3em;
+}
 
 .profile_introduction {
-    position: relative;
+    
     display: flex;
     flex-direction: column;
     row-gap: 1em;
-    width: 700px;
-    
+}
+
+.profile_description{
+    font-size: 1.25em;
 }
 
 .banner_button {
-    width: 180px;
-    height: 55px;
-    border-radius: 50px;
-    border-width: 0;
-    font-size: 20px;
-    font-style: bold;
-    color: white;
-    background-color: #6E57E0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: .8em;
+   background-color: #6E57E0;
+   height: 3em;
+   width: 10em;
+   font-size: 1.25em;
+   color: white;
+   border-radius: 50px;
+   border-width: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
 }
 
 .banner_button:hover {
-    background-color: #5337dc;
+   background-color: blueviolet;
 }
 
-.profile_image {
 
+.profile_image{
     display: flex;
     justify-content: center;
-    justify-items: center;
-    align-items: center;
+   
 }
 
 .unEvenCircle {
     background-color: #6E57E0;
-    width: 450px;
-    height: 450px;
+    width: 12em;
+    height: 12em;
     border-radius: 70% 30% 30% 70% / 60% 40% 60% 30%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
 }
 
 .profile_image_image {
-    width: 450px;
-    height: 450px;
-    align-items: center;
-}
-
-.banner_social_media {
-    cursor: pointer;
-    font-size: 27px;
-    color: #6E57E0;
-}
-
-.banner_social_media:hover {
-    color: #5337dc;
+    width: 12em;
+    height: 12em;
 }
 
 
+
+
+
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-
-    .banner_container {
-        height:fit-content;
-        flex-direction: column;
-        row-gap: 1em;
-        justify-content: flex-start;
-        padding: 100px 15px 0px 15px;
-       
-    }
-
-    .social_media_container {
-        flex-direction: row;
-        column-gap: 1.5em;
-    }
-
-    .banner_container :nth-child(1) {
-        order: 2;
-    }
-
-    .banner_container :nth-child(2) {
-        order: 3;
-    }
-
-    .banner_container :nth-child(3) {
-        order: 1;
-    }
-
-    .profile_introduction :nth-child(1) {
-        order: 1;
-    }
-
-    .profile_introduction :nth-child(2) {
-        order: 2;
-    }
-
-    .profile_introduction :nth-child(3) {
-        order: 3;
-    }
-
-    .profile_introduction :nth-child(4) {
-        order: 4;
-    }
-
-    .profile_introduction {
-        width: 100%;
-    }
-
-    .unEvenCircle {
-
-        width: 200px;
-        height: 200px;
-    }
-
-    .profile_image_image {
-        width: 180px;
-        height: 180px;
-    }
-
-
-
-    .banner_button {
-        
-        width: 150px;
-        height: 45px;
-        font-size: 18px;
-    }
-
+    
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
-    .unEvenCircle {
-        display: none;
-    }
 
+   
 
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .banner_container {
-        column-gap: 1.5em;
 
-        height:fit-content;
-        padding: 150px 15px 150px 15px;
+  
+
+    .banner_container{
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 2em;
+        margin-top: 4em;
     }
 
-
-    .unEvenCircle {
-        display: block;
-        width: 300px;
-        height: 300px;
+    .profile_image{
+        width: 100%;
     }
 
-    .profile_image_image {
-        width: 300px;
-        height: 300px;
+    .social_media_container{
+        flex-direction: column;
+        row-gap: 1.7em;
     }
+
+    .profile_introduction{
+        width: 80%;
+    }
+
 
 
 }
@@ -199,18 +141,62 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    .unEvenCircle {
-        display: block;
-        width: 420px;
-        height: 420px;
+    
+
+    .banner_container{
+        display: flex;
+        flex-wrap: nowrap;
     }
 
-    .profile_image_image {
-        width: 420px;
-        height: 420px;
+    .banner_container :nth-child(1){
+        order: 3;
     }
+    .profile_introduction :nth-child(1){
+        order: 0;
+    }
+
+
+    .unEvenCircle {
+        width: 23em;
+        height: 23em;
+    }
+    
+    .profile_image_image {
+        width: 23em;
+        height: 23em;
+    }
+
+    .profile_image{
+        width: auto;
+    }
+
+    .profile_description{
+        font-size: 1em;
+    }
+
+    .social_media_container{
+        font-size: .75em;
+    }
+
+
+    .unEvenCircle {
+        width: 20em;
+        height: 20em;
+    }
+    
+    .profile_image_image {
+        width: 20em;
+        height: 20em;
+    }
+
+    .banner_button{
+        width: 7.5em;
+        height: 2.125em;
+    }
+    
+
+
+
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}

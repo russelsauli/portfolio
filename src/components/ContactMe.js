@@ -25,7 +25,6 @@ const ContactMe = () => {
                     <h3>Get in touch</h3>
                 </div>
 
-
                 <div className="contact_me_container">
 
                     <div className="contact_me_info">
@@ -34,21 +33,24 @@ const ContactMe = () => {
 
                             <div className="contact_me_info_data">
                                 <BsFillTelephoneFill className="contact_me_icon" />
-                                <h3>Call ME<span className="contact_Details">999-777-666</span></h3>
+                                <h4>Call ME <span className="contact_Details"> 999-777-666</span></h4>
                             </div>
 
                             <div className="contact_me_info_data">
                                 <BsFillEnvelopeFill className="contact_me_icon" />
-                                <h3>Email<span className="contact_Details">alawtayo@gmail.com</span></h3>
+                                <h4>Email <span className="contact_Details"> alawtayo@gmail.com</span></h4>
                             </div>
 
                             <div className="contact_me_info_data">
                                 <BsPinMapFill className="contact_me_icon" />
-                                <h3>Localtion<span className="contact_Details">Manila, Philippines</span></h3>
+                                <h4>Localtion <span className="contact_Details"> Manila, Philippines</span></h4>
                             </div>
 
                         </div>
                     </div>
+
+
+
 
                     <div className="contact_me_form_container">
 
@@ -64,6 +66,7 @@ const ContactMe = () => {
                         </form>
 
                     </div>
+
 
                 </div>
 
